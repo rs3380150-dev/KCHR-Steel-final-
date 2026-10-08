@@ -1,0 +1,15 @@
+[data-testid="site-header"] {
+  will-change: transform;
+  transition: transform 420ms cubic-bezier(.22, 1, .36, 1), opacity 420ms ease, background-color 500ms ease, border-color 500ms ease, backdrop-filter 500ms ease !important;
+}
+
+[data-testid="site-header"].kchr-nav-hidden {
+  transform: translate3d(0, -105%, 0);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 680ms cubic-bezier(.65, 0, .35, 1), opacity 620ms ease-in-out, background-color 500ms ease, border-color 500ms ease, backdrop-filter 500ms ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-testid="site-header"] { transition-duration: 0ms !important; }
+}

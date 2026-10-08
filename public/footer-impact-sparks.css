@@ -1,0 +1,6 @@
+.footer-impact-sparks {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+}

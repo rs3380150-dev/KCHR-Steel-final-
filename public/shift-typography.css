@@ -1,0 +1,196 @@
+/* Font files used by the reference typography at theshift.tokyo. */
+@font-face {
+  font-family: "Gallery";
+  src: url("/assets/shift-fonts/gallery-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Everett";
+  src: url("/assets/shift-fonts/everett-light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Everett";
+  src: url("/assets/shift-fonts/everett-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+body,
+body .font-display,
+body .font-condensed,
+body .font-body,
+body .micro-label,
+body .field-label,
+body .field-input,
+body button,
+body input,
+body textarea,
+body select {
+  font-family: "Everett", sans-serif !important;
+}
+
+body {
+  font-synthesis: none;
+}
+
+body h1:not([data-testid="hero-headline"]),
+body h2.font-display {
+  font-weight: 100 !important;
+  letter-spacing: -0.04em !important;
+}
+
+body .font-condensed,
+body h3,
+body .micro-label {
+  font-weight: 400 !important;
+}
+
+/* Reference-style three-line home hero composition. */
+[data-testid="hero-section"] [data-testid="hero-headline"] {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1 !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(4px, .8vh, 9px);
+}
+
+[data-testid="hero-headline"] > span {
+  position: relative;
+  width: 75%;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: .95 !important;
+}
+
+[data-testid="hero-headline"] > span:nth-child(1),
+[data-testid="hero-headline"] > span:nth-child(3) {
+  font-family: "Gallery", serif !important;
+  font-size: clamp(74px, min(11.27vw, 20vh), 164px) !important;
+  font-weight: 400 !important;
+  text-align: center;
+}
+
+[data-testid="hero-headline"] > span:nth-child(2) {
+  font-family: "Everett", sans-serif !important;
+  font-size: clamp(67px, min(9.3vw, 17.3vh), 137px) !important;
+  font-weight: 400 !important;
+  text-align: left;
+}
+
+[data-testid="hero-headline"] .text-metal {
+  background: none !important;
+  color: #f5f6f4 !important;
+  animation: none !important;
+}
+
+[data-testid="hero-headline"] .text-stroke-hero {
+  -webkit-text-stroke: 0 !important;
+  color: #f5f6f4 !important;
+}
+
+[data-testid="hero-headline"] .text-bronze {
+  color: #a9643a !important;
+}
+
+[data-testid="hero-section"] [data-testid="hero-headline"] + div {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  pointer-events: none;
+}
+
+[data-testid="hero-headline"] + div > p {
+  position: absolute !important;
+  top: 50%;
+  translate: 0 -50%;
+  left: 66.7vw;
+  width: min(25vw, 350px);
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  color: #f5f6f4 !important;
+  font-family: "Everett", sans-serif !important;
+  font-size: clamp(12px, 1.05vw, 17px) !important;
+  font-weight: 400 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -.03em !important;
+  text-transform: uppercase;
+}
+
+[data-testid="hero-headline"] + div > div {
+  position: absolute !important;
+  left: var(--gutter);
+  bottom: 6vh;
+  pointer-events: auto;
+}
+
+@media (max-width: 1023px) {
+  [data-testid="hero-section"] [data-testid="hero-headline"] {
+    display: block !important;
+  }
+
+  [data-testid="hero-headline"] > span {
+    position: absolute;
+    left: 5%;
+    width: 90%;
+  }
+
+  [data-testid="hero-headline"] > span:nth-child(1),
+  [data-testid="hero-headline"] > span:nth-child(3) {
+    font-size: clamp(42px, 10.5vw, 90px) !important;
+  }
+
+  [data-testid="hero-headline"] > span:nth-child(1) {
+    top: 27vh;
+  }
+
+  [data-testid="hero-headline"] > span:nth-child(2) {
+    top: 35.5vh;
+    font-size: clamp(43px, 10vw, 86px) !important;
+  }
+
+  [data-testid="hero-headline"] > span:nth-child(3) {
+    top: 44vh;
+  }
+
+  [data-testid="hero-headline"] + div > p {
+    top: 60vh;
+    translate: none;
+    left: auto;
+    right: var(--gutter);
+    width: min(66vw, 360px);
+    font-size: clamp(12px, 3.3vw, 15px) !important;
+  }
+
+  [data-testid="hero-headline"] + div > div {
+    bottom: 4vh;
+  }
+}
+
+@media (max-width: 1023px) and (max-height: 680px) {
+  [data-testid="hero-headline"] > span:nth-child(1) { top: 20vh; }
+  [data-testid="hero-headline"] > span:nth-child(2) { top: 29vh; }
+  [data-testid="hero-headline"] > span:nth-child(3) { top: 38vh; }
+  [data-testid="hero-headline"] + div > p { top: 53vh; }
+  [data-testid="hero-headline"] + div > div { bottom: 3vh; }
+}

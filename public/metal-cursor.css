@@ -1,0 +1,15 @@
+/* The supplied brushed-metal artwork, sized for a precise desktop pointer. */
+@media (pointer: fine) {
+  html,
+  html *,
+  html *::before,
+  html *::after {
+    cursor: url('/assets/metal-cursor.png') 1 1, auto !important;
+    cursor: image-set(url('/assets/metal-cursor.png') 1x, url('/assets/metal-cursor@2x.png') 2x) 1 1, auto !important;
+  }
+
+  [data-testid="cursor-dot"],
+  [data-testid="cursor-view"] {
+    display: none !important;
+  }
+}

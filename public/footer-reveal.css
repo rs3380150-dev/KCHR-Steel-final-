@@ -1,0 +1,29 @@
+/* The page slides away to uncover the stationary footer beneath it. */
+#root.footer-reveal-active {
+  isolation: isolate;
+}
+
+#root.footer-reveal-active [data-testid="page-main"] {
+  background: var(--bg-deep, #080a0b);
+}
+
+#root.footer-reveal-active [data-testid="site-footer"] {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+#root.footer-reveal-active.footer-reveal-tall [data-testid="site-footer"] {
+  top: 0;
+  bottom: auto;
+  transform: translateY(var(--footer-reveal-offset, 0px));
+}
+
+#root.footer-reveal-active::after {
+  content: "";
+  display: block;
+  height: var(--footer-reveal-height, 0px);
+  pointer-events: none;
+}

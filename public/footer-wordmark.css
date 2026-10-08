@@ -1,0 +1,31 @@
+/* The supplied PNG has a transparent canvas. Crop its empty top and bottom
+   in CSS so the steel lettering occupies the original footer wordmark slot. */
+[data-testid="site-footer"] > .container-kchr {
+  padding-top: 56px !important;
+}
+
+[data-testid="site-footer"] .footer-links-grid {
+  margin-top: 32px !important;
+}
+
+[data-testid="footer-wordmark"].footer-logo-crop {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 2172 / 320;
+  margin: 0;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.footer-logo-crop > img {
+  position: absolute;
+  top: -58.9%;
+  left: 0;
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}

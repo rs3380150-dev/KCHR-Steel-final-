@@ -1,0 +1,63 @@
+/* Lovable homepage enquiry reference: computed background oklch(0.18 0.006 220). */
+[data-testid="contact-cta"] {
+  box-sizing: border-box;
+  height: auto;
+  min-height: 0;
+  background: oklch(0.18 0.006 220) !important;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+[data-testid="contact-cta"] > .container-kchr {
+  width: 100%;
+}
+
+[data-testid="contact-cta"] h2 {
+  font-size: clamp(3.4rem, 7.3vw, 8.75rem) !important;
+}
+
+@media (min-width: 1024px) {
+  [data-testid="contact-cta"] > .container-kchr {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+    column-gap: clamp(48px, 6vw, 112px);
+    row-gap: clamp(28px, 5vh, 52px);
+    align-items: center;
+  }
+
+  [data-testid="contact-cta"] > .container-kchr > :first-child {
+    grid-column: 1 / -1;
+  }
+
+  [data-testid="contact-cta"] > .container-kchr > h2 {
+    grid-column: 1;
+    margin-top: 0 !important;
+  }
+
+  [data-testid="contact-cta"] > .container-kchr > h2 + div {
+    grid-column: 2;
+  }
+
+  [data-testid="contact-cta"] > .container-kchr > h2 + div > p:first-child {
+    margin-top: 0 !important;
+  }
+}
+
+/* The shipped Emergent bundle still contains these decorative elements. */
+[data-testid="contact-cta"] > img,
+[data-testid="contact-cta"] > div[aria-hidden="true"] {
+  display: none !important;
+}
+
+@media (min-width: 768px) and (max-height: 700px) {
+  [data-testid="contact-cta"] h2 {
+    font-size: clamp(3.3rem, 6.8vw, 7.6rem) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  [data-testid="contact-cta"] h2 {
+    font-size: clamp(3.25rem, 12vw, 6rem) !important;
+  }
+
+}

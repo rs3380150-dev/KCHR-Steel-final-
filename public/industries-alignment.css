@@ -1,0 +1,8 @@
+/* Clear the long Construction heading without changing the other industry rows. */
+@media (min-width: 1024px) {
+  [data-testid="industry-section-construction"] > :last-child {
+    --construction-shift: clamp(44px, 3.25vw, 56px);
+    margin-left: var(--construction-shift);
+    margin-right: calc(-1 * var(--construction-shift));
+  }
+}

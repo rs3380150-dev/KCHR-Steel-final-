@@ -1,0 +1,22 @@
+/* Equal spacing around the home intro and 1963 sections. */
+[data-testid="intro-section"],
+[data-testid="legacy-number-section"] {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+@media (min-width: 768px) {
+  [data-testid="intro-section"],
+  [data-testid="legacy-number-section"] {
+    padding-top: 88px !important;
+    padding-bottom: 88px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-testid="intro-section"],
+  [data-testid="legacy-number-section"] {
+    padding-top: 112px !important;
+    padding-bottom: 112px !important;
+  }
+}
